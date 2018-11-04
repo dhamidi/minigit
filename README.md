@@ -1,6 +1,6 @@
 # Description
 
-This repository contains a minimal, in-memory implementation of git. 
+This repository contains a minimal, in-memory implementation of git.
 
 The purpose of this repository is to guide a learner towards implementing a minimal version of git themselves in order to get a better understanding of how git works.
 
@@ -15,10 +15,10 @@ while [ "$current_step" -lt 6 ]; do
     if bin/run-tests "$current_step"; then
       current_step=$((current_step + 1))
     else
-	  read -p 'Press enter to edit lib/minigit.rb'
+      read -p 'Press enter to edit lib/minigit.rb'
       $EDITOR lib/minigit.rb
     fi
-done	
+done
 ```
 
 # How to use this repository
