@@ -11,7 +11,7 @@ For a simple overview of how git works internally, please see https://www.kennet
 ```
 current_step=1
 bundler --binstubs
-while [ "$current_step" -lt 7 ]; do
+while [ "$current_step" -lt 6 ]; do
     if bin/run-tests "$current_step"; then
       current_step=$((current_step + 1))
     else
@@ -33,6 +33,14 @@ Tests for all steps up to step N can be run by invoking `bin/run-tests N`, e.g. 
 A version of `minigit.rb` that passes all tests is provided on the branch `solution`.
 
 **Start reading at [./spec/spec_helper.rb](./spec/spec_helper.rb)** to see what objects are available in the tests.
+
+# Steps
+
+1. Writing blobs (strings) to the repository and generating IDs for them
+2. Writing trees (maps of strings to blobs or trees) to the repository
+3. Building a history through a linked list of commit objects
+4. Accessing stored contents through a working copy
+5. Using references to associate symbolic names with object IDs
 
 # Code Architecture
 

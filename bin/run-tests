@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 selected_step = ARGV.first.to_i
-selected_step = 6 if selected_step.zero?
+selected_step = 5 if selected_step.zero?
 steps = (1..selected_step)
 
 cmd = [
