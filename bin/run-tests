@@ -12,5 +12,5 @@ cmd = [
 
 STDERR.puts cmd.join(' ')
 
-system(*cmd)
+exit system(*cmd)
 					 

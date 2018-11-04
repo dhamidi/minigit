@@ -15,6 +15,7 @@ while [ "$current_step" -lt 6 ]; do
     if bin/run-tests "$current_step"; then
       current_step=$((current_step + 1))
     else
+	  read -p 'Press enter to edit lib/minigit.rb'
       $EDITOR lib/minigit.rb
     fi
 done	
